@@ -17,11 +17,12 @@ class StudentController extends Controller
 
     public function create(Request $request)
     {
-        if (!$request->name==null && !$request->email==null && !$request->mobile==null){
+        if (!$request->name==null && !$request->email==null && !$request->mobile==null && !$request->image==null){
             Student::insert([
                 'name'=>$request->name,
                 'email'=>$request->email,
-                'mobile'=>$request->mobile
+                'mobile'=>$request->mobile,
+                'image'=>$request->image
             ]);
             return redirect()->back()->with('message', 'Student info save successfully.');
         }
@@ -51,6 +52,9 @@ class StudentController extends Controller
         }
         if ($request->has('mobile')){
             Student::where('id',$id)->update(['mobile'=>$request->mobile]);
+        }
+        if ($request->has('image')){
+            Student::where('id',$id)->update(['image'=>$request->image]);
         }
 
         return redirect('/manage-student')->with('message', 'Student info update successfully.');

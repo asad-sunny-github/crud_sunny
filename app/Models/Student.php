@@ -9,16 +9,17 @@ class Student extends Model
 {
     use HasFactory;
 
-//    protected $fillable = [
-//        'name',
-//        'email',
-//        'mobile'
-//    ];
+    protected $fillable = [
+        'name',
+        'email',
+        'mobile',
+        'image'
+    ];
 
-    public $table = "students";
-    public $primaryKey = "id";
-    public $keyType = "int";
-    public $incrementing = "true";
-    public $timestamps = "true";
+//    public $table = "students";
+//    public $primaryKey = "id";
+//    public $keyType = "int";
+//    public $incrementing = "true";
+//    public $timestamps = "true";
 
 }

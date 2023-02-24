@@ -34,6 +34,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="horizontal-image-input" class="col-sm-3 col-form-label">Student Image</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" name="image" id="horizontal-image-input">
+                                        <div class="mt-2">
+                                            <img width="150px" height="100px" src="{{ asset($student->image) }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-form-label col-md-3"></label>
                                     <div class="col-md-9">
                                         <input type="submit" class="btn btn-success" value="Update Student Info"/>

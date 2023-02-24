@@ -22,6 +22,7 @@
                                         <th>Student Name</th>
                                         <th>Student Email</th>
                                         <th>Student Mobile</th>
+                                        <th>Student Image</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -33,6 +34,7 @@
                                             <td>{{$student->name}}</td>
                                             <td>{{$student->email}}</td>
                                             <td>{{$student->mobile}}</td>
+                                            <td><img src="{{ asset($student->image) }}" height="50px" width="60px" alt=""></td>
                                             <td>
                                                 <a href="{{route('edit-student', ['id'=>$student->id])}}" class="btn btn-success btn-sm">
                                                     <i class="fa fa-edit"></i>
